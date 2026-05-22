@@ -1,6 +1,5 @@
 # cong-GZH-Content-Composer
 
-# cong-GZH-Content-Composer
 公众号推文 AI 全流程生成器 —— 从一句话到排版就绪，一个 Skill 搞定。
 
 
