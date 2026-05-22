@@ -1,0 +1,76 @@
+#!/bin/bash
+# ============================================================================
+# Pre-commit Hook: Auto-run version checker + test suite
+# 公众号内容智能生成器 v8.5.0
+#
+# 安装方式：
+#   cp scripts/pre-commit .git/hooks/pre-commit
+#   chmod +x .git/hooks/pre-commit
+#
+# 或在 .git/hooks/ 中创建指向本文件的符号链接
+# ============================================================================
+
+SKILL_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+PYTHON="${PYTHON:-python3}"
+PASS=true
+
+echo ""
+echo "🔍 公众号内容智能生成器 — Pre-commit 检查"
+echo "============================================"
+
+# 检查 Python 是否可用
+if ! command -v "$PYTHON" &> /dev/null; then
+    echo "⚠️  Python ($PYTHON) 不可用，跳过检查"
+    echo "   请设置 PYTHON 环境变量指向 Python 3.7+"
+    exit 0
+fi
+
+# 1. 版本一致性检查
+echo ""
+echo "📋 [1/2] 版本一致性检查..."
+echo "----------------------------------------"
+
+VERSION_CHECK="$SKILL_ROOT/scripts/version_checker.py"
+if [ -f "$VERSION_CHECK" ]; then
+    $PYTHON "$VERSION_CHECK"
+    if [ $? -ne 0 ]; then
+        echo ""
+        echo "❌ 版本不一致！请修复后再提交。"
+        echo "   运行 python scripts/version_checker.py 查看详情"
+        PASS=false
+    fi
+else
+    echo "⚠️  版本检查脚本不存在: $VERSION_CHECK"
+fi
+
+# 2. 测试套件
+echo ""
+echo "🧪 [2/2] 测试套件..."
+echo "----------------------------------------"
+
+TEST_RUNNER="$SKILL_ROOT/tests/test_runner.py"
+if [ -f "$TEST_RUNNER" ]; then
+    $PYTHON "$TEST_RUNNER" 2>&1 | tail -20
+    if [ $? -ne 0 ]; then
+        echo ""
+        echo "❌ 测试失败！请修复后再提交。"
+        PASS=false
+    fi
+else
+    echo "⚠️  测试入口不存在: $TEST_RUNNER"
+fi
+
+# 最终判定
+echo ""
+echo "============================================"
+if [ "$PASS" = true ]; then
+    echo "✅ 所有检查通过！允许提交。"
+    exit 0
+else
+    echo "❌ 检查未通过！提交被阻止。"
+    echo ""
+    echo "提示："
+    echo "  - 只更新了内容但版本未同步？运行 version_checker.py 查看"
+    echo "  - 紧急跳过检查：git commit --no-verify"
+    exit 1
+fi

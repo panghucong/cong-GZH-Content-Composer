@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排版样式预览 - 智能内容生成器 v8.5.0</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.8; color: #3f3f3f; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h1 { font-size: 28px; margin-bottom: 30px; text-align: center; }
+        h2 { font-size: 22px; margin-top: 40px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #2c5aa0; color: #2c5aa0; }
+        h3 { font-size: 18px; margin-top: 25px; margin-bottom: 15px; color: #3f3f3f; }
+        .version-tag { display: inline-block; background: #2c5aa0; color: white; padding: 2px 10px; border-radius: 12px; font-size: 12px; margin-left: 8px; }
+        .component-group { margin-bottom: 38px; }
+        .component-label { display: inline-block; background: #e8f1f8; color: #2c5aa0; padding: 2px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 10px; }
+        .component-label.new { background: #fdf6ec; color: #e6a23c; }
+        .note { background: #f5f5f5; padding: 10px 15px; border-radius: 6px; font-size: 13px; color: #666; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>排版样式预览 <span class="version-tag">v8.5.0</span></h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">section-only架构 + 3色系统 + 18种组件</p>
+
+        <!-- ==================== 基础组件（10个）==================== -->
+        <h2>基础组件（10个）</h2>
+
+        <!-- 1. 文章标题 -->
+        <div class="component-group">
+            <h3><span class="component-label">01 section-title</span> 文章标题</h3>
+            <section style="padding: 20px; background: #e8f1f8; border-radius: 8px;">
+                <section style="font-size: 20px; font-weight: bold; text-align: center; color: #2c5aa0;">
+                    30岁，我为什么劝你一定要买重疾险？
+                </section>
+            </section>
+        </div>
+
+        <!-- 2. 小标题 -->
+        <div class="component-group">
+            <h3><span class="component-label">02 section-subtitle</span> 小标题</h3>
+            <section style="margin: 20px 0 10px 0; padding-left: 10px; border-left: 3px solid #2c5aa0;">
+                <section style="font-size: 16px; font-weight: bold; color: #2c5aa0;">
+                    一、什么是重疾险？
+                </section>
+            </section>
+        </div>
+
+        <!-- 3. 正文段落 -->
+        <div class="component-group">
+            <h3><span class="component-label">03 section-body</span> 正文段落</h3>
+            <section style="margin-bottom: 28px; font-size: 15px; line-height: 2; color: #3f3f3f;">
+                重疾险，全称重大疾病保险，是指在保险期间内被保险人确诊患有合同约定的重大疾病时，保险公司按照合同约定保额一次性给付保险金的健康保险。
+            </section>
+        </div>
+
+        <!-- 4. 数字高亮卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label">04 section-data-card</span> 数字高亮卡片</h3>
+            <section style="margin: 28px 0; padding: 15px; background: #e8f1f8; border-radius: 8px; text-align: center;">
+                <section style="font-size: 28px; font-weight: bold; color: #2c5aa0;">
+                    300万
+                </section>
+                <section style="font-size: 14px; color: #666;">
+                    重疾保障额度
+                </section>
+            </section>
+        </div>
+
+        <!-- 5. 引用/金句卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label">05 section-quote</span> 引用/金句卡片</h3>
+            <section style="margin: 28px 0; padding: 15px; border-left: 5px solid #2c5aa0; font-style: italic; color: #666;">
+                <section>"保险不是买给保险公司的，而是买给家人的安心。"</section>
+            </section>
+        </div>
+
+        <!-- 6. 列表 -->
+        <div class="component-group">
+            <h3><span class="component-label">06 section-list</span> 列表</h3>
+            <section style="margin: 28px 0; padding-left: 20px;">
+                <section style="margin-bottom: 10px; font-size: 15px; line-height: 1.8;">&#8226; 保障全：100种重疾+50种轻症，确诊即赔</section>
+                <section style="margin-bottom: 10px; font-size: 15px; line-height: 1.8;">&#8226; 保费低：30岁女性，50万保额，年交仅3000+</section>
+                <section style="margin-bottom: 10px; font-size: 15px; line-height: 1.8;">&#8226; 服务好：绿通服务+专家门诊预约</section>
+            </section>
+        </div>
+
+        <!-- 7. 分割线 -->
+        <div class="component-group">
+            <h3><span class="component-label">07 section-separator</span> 分割线</h3>
+            <section style="border-top: 1px solid #eee; margin: 12px 0;"></section>
+        </div>
+
+        <!-- 8. 对比表格（斑马纹+圆角） -->
+        <div class="component-group">
+            <h3><span class="component-label">08 section-table</span> 对比表格（斑马纹+圆角）</h3>
+            <section style="margin: 28px 0;">
+                <table style="width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 8px; overflow: hidden; font-size: 14px; border: 1px solid #e0e0e0;">
+                    <tr style="background: #2c5aa0; color: white;">
+                        <th style="padding: 12px 15px; text-align: left; font-weight: bold;">产品名称</th>
+                        <th style="padding: 12px 15px; text-align: left; font-weight: bold;">重疾保额</th>
+                        <th style="padding: 12px 15px; text-align: left; font-weight: bold;">年交保费</th>
+                    </tr>
+                    <tr style="background: #fff;">
+                        <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">产品A</td>
+                        <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">100万</td>
+                        <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">¥3,680</td>
+                    </tr>
+                    <tr style="background: #e8f1f8;">
+                        <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">产品B</td>
+                        <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">80万</td>
+                        <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">¥2,950</td>
+                    </tr>
+                    <tr style="background: #fff;">
+                        <td style="padding: 12px 15px;">产品C</td>
+                        <td style="padding: 12px 15px;">50万</td>
+                        <td style="padding: 12px 15px;">¥1,800</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+        <!-- 9. 图片占位 -->
+        <div class="component-group">
+            <h3><span class="component-label">09 section-image</span> 图片占位</h3>
+            <section style="margin: 28px 0; text-align: center;">
+                <section style="display: inline-block; padding: 20px; background: #f5f5f5; border-radius: 8px; color: #999;">
+                    [图片：保险理赔流程图，建议比例16:9]
+                </section>
+            </section>
+        </div>
+
+        <!-- 10. 结尾引导区 -->
+        <div class="component-group">
+            <h3><span class="component-label">10 section-closing</span> 结尾引导区</h3>
+            <section style="margin: 20px 0; padding: 20px; background: #e8f1f8; border-radius: 8px; text-align: center;">
+                <section style="font-size: 15px; color: #666; margin-bottom: 10px;">觉得有用？关注我，获取更多保险干货</section>
+                <section style="font-size: 14px; color: #2c5aa0;">回复"配置"获取你的专属保障方案</section>
+            </section>
+        </div>
+
+        <!-- ==================== 扩展组件（8个）==================== -->
+        <h2>扩展组件 <span class="version-tag">v8.5.0新增</span></h2>
+
+        <!-- 11. 步骤标题 -->
+        <div class="component-group">
+            <h3><span class="component-label new">11 section-step-header</span> 步骤标题</h3>
+            <section style="margin: 38px 0 20px 0; padding: 12px 20px; background: #2c5aa0; border-radius: 8px 8px 0 0;">
+                <section style="font-size: 16px; font-weight: bold; color: white;">
+                    步骤1：确认保障需求
+                </section>
+            </section>
+            <section style="padding: 20px; border: 1px solid #e0e0e0; border-top: none; border-radius: 0 0 8px 8px; background: #fafafa;">
+                <section style="font-size: 15px; color: #3f3f3f; line-height: 2;">先梳理家庭责任（房贷、子女教育、父母赡养），再确定保障缺口。</section>
+            </section>
+        </div>
+
+        <!-- 12. 优先级卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label new">12 section-priority-card</span> 优先级卡片</h3>
+            <section style="margin: 28px 0; padding: 18px; background: #e8f1f8; border-left: 4px solid #2c5aa0; border-radius: 0 8px 8px 0;">
+                <section style="font-size: 14px; color: #2c5aa0; font-weight: bold; margin-bottom: 8px;">核心要点</section>
+                <section style="font-size: 15px; color: #3f3f3f; line-height: 1.8;">重疾险保额建议为年收入的3-5倍，低于30万保额实际保障意义不大。</section>
+            </section>
+        </div>
+
+        <!-- 13. 警告卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label new">13 section-warning-card</span> 警告卡片（警告色系）</h3>
+            <section style="margin: 28px 0; padding: 18px; background: #fdf6ec; border-left: 4px solid #e6a23c; border-radius: 0 8px 8px 0;">
+                <section style="font-size: 14px; color: #e6a23c; font-weight: bold; margin-bottom: 8px;">注意</section>
+                <section style="font-size: 14px; color: #3f3f3f; line-height: 1.8;">等待期内出险不赔，投保前需如实告知健康状况，否则可能影响理赔。</section>
+            </section>
+        </div>
+
+        <!-- 14. CTA三件套卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label new">14 section-cta-card</span> CTA三件套卡片</h3>
+            <!-- 物理行动 -->
+            <section style="margin-bottom: 28px; padding: 20px; background: #e8f1f8; border-radius: 8px; text-align: center;">
+                <section style="font-size: 16px; font-weight: bold; color: #2c5aa0; margin-bottom: 8px;">建议操作</section>
+                <section style="font-size: 15px; color: #3f3f3f; line-height: 1.8;">截图保存本文 / 收藏备用 / 打印这份检查清单</section>
+            </section>
+            <!-- 社交行动 -->
+            <section style="margin-bottom: 28px; padding: 20px; background: #fdf6ec; border-radius: 8px; text-align: center;">
+                <section style="font-size: 16px; font-weight: bold; color: #e6a23c; margin-bottom: 8px;">帮到你的话</section>
+                <section style="font-size: 15px; color: #3f3f3f; line-height: 1.8;">转发给家人朋友 / 分享到家庭群</section>
+            </section>
+            <!-- 回访行动 -->
+            <section style="padding: 25px; background: #2c5aa0; border-radius: 8px; text-align: center;">
+                <section style="font-size: 18px; font-weight: bold; color: white; margin-bottom: 12px;">关注我，获取更多实用内容</section>
+                <section style="display: inline-block; padding: 10px 30px; background: white; color: #2c5aa0; border-radius: 20px; font-weight: bold; font-size: 15px; margin-bottom: 10px;">立即关注</section>
+                <section style="font-size: 12px; color: rgba(255,255,255,0.7);">回复"配置"免费获取《家庭保障规划手册》</section>
+            </section>
+        </div>
+
+        <!-- 15. 案例卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label new">15 section-case-card</span> 案例卡片</h3>
+            <section style="margin: 28px 0; padding: 20px; background: #fafafa; border-radius: 8px; border: 1px solid #eee;">
+                <section style="font-size: 13px; color: #999; margin-bottom: 10px;">真实案例</section>
+                <section style="font-size: 15px; color: #3f3f3f; line-height: 2; font-style: italic;">
+                    "我同事去年查出甲状腺癌，治疗费用花了35万。好在之前买了重疾险，确诊后一次性赔了50万，治疗不用操心钱的事。"
+                </section>
+                <section style="font-size: 13px; color: #666; margin-top: 10px; text-align: right;">
+                    —— 某互联网公司员工（32岁）
+                </section>
+            </section>
+        </div>
+
+        <!-- 16. 清单卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label new">16 section-checklist-card</span> 清单卡片</h3>
+            <section style="margin: 28px 0; padding: 20px; background: #e8f1f8; border-radius: 8px;">
+                <section style="font-size: 16px; font-weight: bold; color: #2c5aa0; margin-bottom: 15px;">理赔材料清单</section>
+                <section style="margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.8;">&#9744; 理赔申请书（保险公司提供）</section>
+                <section style="margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.8;">&#9744; 被保险人身份证复印件</section>
+                <section style="margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.8;">&#9744; 确诊证明/病理报告</section>
+                <section style="margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.8;">&#9744; 住院病历/出院小结</section>
+                <section style="margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.8;">&#9744; 银行卡复印件</section>
+            </section>
+        </div>
+
+        <!-- 17. 对比卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label new">17 section-comparison-card</span> 对比卡片（红绿正反）</h3>
+            <section style="margin: 28px 0;">
+                <section style="padding: 15px; background: #fef0f0; border-radius: 8px 8px 0 0; border: 1px solid #fde2e2;">
+                    <section style="font-size: 14px; font-weight: bold; color: #f56c6c; margin-bottom: 8px;">常见误区</section>
+                    <section style="font-size: 14px; color: #3f3f3f; line-height: 1.8;">"我有医保，不需要重疾险。"</section>
+                </section>
+                <section style="padding: 15px; background: #f0f9eb; border-radius: 0 0 8px 8px; border: 1px solid #e1f3d8; border-top: none;">
+                    <section style="font-size: 14px; font-weight: bold; color: #67c23a; margin-bottom: 8px;">正确认知</section>
+                    <section style="font-size: 14px; color: #3f3f3f; line-height: 1.8;">医保报销上限+自费药不报+收入中断=重疾险是必要补充。</section>
+                </section>
+            </section>
+        </div>
+
+        <!-- 18. 总结卡片 -->
+        <div class="component-group">
+            <h3><span class="component-label new">18 section-summary-card</span> 总结卡片</h3>
+            <section style="margin: 38px 0; padding: 20px; background: #e8f1f8; border-radius: 8px; border: 2px solid #2c5aa0;">
+                <section style="font-size: 16px; font-weight: bold; color: #2c5aa0; margin-bottom: 12px; text-align: center;">本文核心要点</section>
+                <section style="font-size: 15px; color: #3f3f3f; line-height: 2;">1. 重疾险保额建议年收入的3-5倍<br>2. 越早买越便宜，等待期注意<br>3. 理赔材料提前准备，流程可简化</section>
+            </section>
+        </div>
+
+        <!-- ==================== 3色系统展示 ==================== -->
+        <h2>3色系统 <span class="version-tag">v8.5.0新增</span></h2>
+        <div class="component-group">
+            <section style="margin: 28px 0;">
+                <section style="display: inline-block; padding: 15px 25px; background: #2c5aa0; border-radius: 8px; color: white; font-weight: bold; margin-right: 10px; font-size: 14px;">
+                    {主题色} #2c5aa0<br><small>信息/正面/强调</small>
+                </section>
+                <section style="display: inline-block; padding: 15px 25px; background: #e6a23c; border-radius: 8px; color: white; font-weight: bold; margin-right: 10px; font-size: 14px;">
+                    {警告色} #e6a23c<br><small>警告/风险/注意</small>
+                </section>
+                <section style="display: inline-block; padding: 15px 25px; background: #3f3f3f; border-radius: 8px; color: white; font-weight: bold; margin-right: 10px; font-size: 14px;">
+                    {正文色} #3f3f3f<br><small>主要文本</small>
+                </section>
+                <section style="display: inline-block; padding: 15px 25px; background: #666; border-radius: 8px; color: white; font-weight: bold; font-size: 14px;">
+                    {说明色} #666<br><small>辅助说明</small>
+                </section>
+            </section>
+            <div class="note">
+                主题色占比60-70%主导，警告色15-20%制造视觉锚点，灰阶文字15-25%建立阅读节奏。
+            </div>
+        </div>
+
+        <!-- ==================== 留白梯度展示 ==================== -->
+        <h2>留白梯度规范 <span class="version-tag">v8.5.0新增</span></h2>
+        <div class="component-group">
+            <table style="width: 100%; border-collapse: collapse; font-size: 14px; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                <tr style="background: #2c5aa0; color: white;">
+                    <th style="padding: 12px 15px; text-align: left;">留白层级</th>
+                    <th style="padding: 12px 15px; text-align: left;">间距</th>
+                    <th style="padding: 12px 15px; text-align: left;">使用场景</th>
+                </tr>
+                <tr style="background: #fff;">
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">模块间距</td>
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #eee; font-weight: bold; color: #2c5aa0;">26-32px（推荐28px）</td>
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">同一章节内组件之间</td>
+                </tr>
+                <tr style="background: #e8f1f8;">
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">章节分隔</td>
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #eee; font-weight: bold; color: #2c5aa0;">36-40px（推荐38px）</td>
+                    <td style="padding: 12px 15px; border-bottom: 1px solid #eee;">不同章节/模块之间</td>
+                </tr>
+                <tr style="background: #fff;">
+                    <td style="padding: 12px 15px;">分割线</td>
+                    <td style="padding: 12px 15px; font-weight: bold; color: #2c5aa0;">12px margin</td>
+                    <td style="padding: 12px 15px;">分割线两侧</td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; color: #999; font-size: 14px;">
+            <p>智能内容生成器 v8.5.0（第四代优化版）</p>
+            <p>section-only架构 + 3色系统 + 18种组件 · 最后更新：2026-05-14</p>
+        </div>
+    </div>
+</body>
+</html>
